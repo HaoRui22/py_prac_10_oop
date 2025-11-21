@@ -47,3 +47,9 @@ class Tortoise(Animal):
         print("Tortoise is crawling slowly...")
 
 run_twice(Tortoise())
+
+class Timer(object):
+    def run(self):
+        print('Start...')
+
+Timer().run()
