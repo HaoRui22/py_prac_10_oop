@@ -18,13 +18,21 @@
 和静态语言不同，Python允许对实例变量绑定任何数据，也就是说，对于两个实例变量，虽然它们都是同一个类的不同实例，但拥有的变量名称都可能不同：
 
 \>>> bart = Student('Bart Simpson', 59)
+
 \>>> lisa = Student('Lisa Simpson', 87)
+
 \>>> bart.age = 8
+
 \>>> bart.age
+
 8
+
 \>>> lisa.age
+
 Traceback (most recent call last):
+
   File "<stdin>", line 1, in <module>
+  
 AttributeError: 'Student' object has no attribute 'age'
 
 ## 10.2 访问限制
