@@ -106,8 +106,18 @@ print(hasattr(myobj, 'y'))
 print(myobj.y)
 print(getattr(myobj, 'y'))
 
-print(getattr(myobj, 'z', 404)) # 传入defau参数404，否则属性不存在的话会抛出报错AttributeError
+print(getattr(myobj, 'z', 404)) # 传入 defau 参数 404，否则属性不存在的话会抛出报错AttributeError
 
 # 也可以获得对象的方法
 print(hasattr(myobj, 'power'))
 print(getattr(myobj, 'power'))
+
+fn = getattr(myobj, 'power') # 获取 myobj 的属性并赋值到变量 fn
+print(fn)
+print(fn())
+
+# 不知道对象信息的情况下再去获取信息
+# 如果能
+sum = myobj.x + myobj.y
+# 就不要
+sum = getattr(myobj, 'x') + getattr(myobj, 'y')
